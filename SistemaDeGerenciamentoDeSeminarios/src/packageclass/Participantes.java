@@ -3,17 +3,23 @@ package packageclass;
 public class Participantes {
     private Seminarios seminarios;
     private String nome;
-    private short idade;
+    private int idade;
 
     public Participantes () {}
-    public Participantes (String nome , short idade , Seminarios seminario) {
+
+    public Participantes (String nome , int idade) {
         this.nome = nome;
         this.idade = idade;
-        this.seminarios = seminario;
     }
-    
+
+    public void imprime () {
+        System.out.println("Nome: "+this.nome);
+        System.out.println("Idade: "+this.idade);
+        System.out.println("Esta participando do Seminario: "+this.seminarios.getTitulo());
+    }
+
     public Seminarios getSeminarios() {
-        return seminarios;
+        return this.seminarios;
     }
 
     public void setSeminarios(Seminarios seminarios) {
@@ -21,15 +27,15 @@ public class Participantes {
     }
 
     public String getNome() {
-        return nome;
+        return this.nome;
     }
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public short getIdade() {
-        return idade;
+    public int getIdade() {
+        return this.idade;
     }
 
     public void setIdade(short idade) {

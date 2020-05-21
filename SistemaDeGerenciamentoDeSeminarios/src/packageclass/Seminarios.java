@@ -9,7 +9,7 @@ public class Seminarios {
     private String titulo;
 
     public Seminarios () {}
-    public Seminarios (Participantes[] participantes , Coordenador coordenador , Local local , String titulo) {
+    public Seminarios (Coordenador coordenador , Local local , String titulo , Participantes... participantes) {
         this.participantes = participantes;
         this.coordenador = coordenador;
         this.local = local;
@@ -21,7 +21,7 @@ public class Seminarios {
         if (this.participantes != null) {
             System.out.print("Os Participantes do seminario sao:");
             for (Participantes participante : this.participantes) {
-                System.out.print(" " + participante + ", ");
+                System.out.print(" " + participante.getNome() + ", ");
             }
             System.out.println();
         }
@@ -31,7 +31,7 @@ public class Seminarios {
         }
 
         if (this.coordenador != null) {
-            System.out.println("Coordenador: " + this.coordenador);
+            System.out.println("Coordenador: " + this.coordenador.getNome()+"\nEspecializacao: "+this.coordenador.getEspecializacao());
         }
 
         else {
@@ -39,7 +39,7 @@ public class Seminarios {
         }
 
         if(this.local != null){
-            System.out.println("Local do Seminario: "+this.local);
+            System.out.println("Local / Bairro: "+this.local.getBairro()+"\n,na Rua: "+this.local.getRua());
         }
 
         else {

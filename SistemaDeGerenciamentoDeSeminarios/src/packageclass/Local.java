@@ -6,15 +6,20 @@ public class Local {
     private String bairro;
 
     public Local() {}
-    public Local(String rua , String bairro , Seminarios[] seminarios) {
+
+    public Local(String rua , String bairro) {
         this.bairro = bairro;
         this.rua = rua;
         this.seminarios = seminarios;
     }
 
-    public void immprime() {
+    public void imprime() {
         if(this.seminarios != null) {
-            System.out.println("Seminarios do Lugar: "+this.seminarios);
+            System.out.print("Seminarios do Lugar: ");
+            for(Seminarios sem : this.seminarios) {
+                System.out.print(" "+sem.getTitulo()+" , ");
+            }
+            System.out.println();
         }
         else {
             System.out.println("O lugar nao possui seminarios");
