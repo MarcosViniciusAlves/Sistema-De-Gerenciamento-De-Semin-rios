@@ -23,6 +23,7 @@ public class Seminarios {
             for (Participantes participante : this.participantes) {
                 System.out.print(" " + participante + ", ");
             }
+            System.out.println();
         }
 
         else {

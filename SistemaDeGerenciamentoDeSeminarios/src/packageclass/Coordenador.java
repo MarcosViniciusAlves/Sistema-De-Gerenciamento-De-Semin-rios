@@ -13,6 +13,18 @@ public class Coordenador {
     }
 
     public void imprime() {
+        if(this.seminarios != null) {
+            System.out.print("Seminarios que o coordenador ira ministrar: ");
+            for (Seminarios seminario : this.seminarios) {
+                System.out.print(" "+seminario+" ,");
+            }
+            System.out.println();
+        }
+        else {
+            System.out.println("O coordenador "+this.nome+" nao possui seminarios para ministrar");
+        }
+        System.out.println("Nome do Coordenador: "+this.seminarios);
+        System.out.println("Especializacao do Coordenador: "+this.especializacao);
     }
 
     public Seminarios[] getSeminarios() {
