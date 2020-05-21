@@ -5,25 +5,26 @@ public class Coordenador {
     private String nome;
     private String especializacao;
 
-    public Coordenador () {}
-    public Coordenador (String nome,String especializacao) {
+    public Coordenador() {
+    }
+
+    public Coordenador(String nome, String especializacao) {
         this.especializacao = especializacao;
         this.nome = nome;
     }
 
     public void imprime() {
-        if(this.seminarios != null) {
+        if (this.seminarios != null) {
             System.out.print("Seminarios que o coordenador ira ministrar: ");
             for (Seminarios seminario : this.seminarios) {
-                System.out.print(" "+seminario.getTitulo()+" ,");
+                System.out.print(" " + seminario.getTitulo() + " ,");
             }
             System.out.println();
+        } else {
+            System.out.println("O coordenador " + this.nome + " nao possui seminarios para ministrar");
         }
-        else {
-            System.out.println("O coordenador "+this.nome+" nao possui seminarios para ministrar");
-        }
-        System.out.println("Nome do Coordenador: "+this.nome);
-        System.out.println("Especializacao do Coordenador: "+this.especializacao);
+        System.out.println("Nome do Coordenador: " + this.nome);
+        System.out.println("Especializacao do Coordenador: " + this.especializacao);
     }
 
     public Seminarios[] getSeminarios() {

@@ -5,17 +5,18 @@ public class Participantes {
     private String nome;
     private int idade;
 
-    public Participantes () {}
+    public Participantes() {
+    }
 
-    public Participantes (String nome , int idade) {
+    public Participantes(String nome, int idade) {
         this.nome = nome;
         this.idade = idade;
     }
 
-    public void imprime () {
-        System.out.println("Nome: "+this.nome);
-        System.out.println("Idade: "+this.idade);
-        System.out.println("Esta participando do Seminario: "+this.seminarios.getTitulo());
+    public void imprime() {
+        System.out.println("Nome: " + this.nome);
+        System.out.println("Idade: " + this.idade);
+        System.out.println("Esta participando do Seminario: " + this.seminarios.getTitulo());
     }
 
     public Seminarios getSeminarios() {

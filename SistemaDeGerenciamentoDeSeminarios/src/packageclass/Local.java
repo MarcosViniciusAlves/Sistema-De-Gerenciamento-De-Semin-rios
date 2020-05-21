@@ -5,27 +5,27 @@ public class Local {
     private String rua;
     private String bairro;
 
-    public Local() {}
+    public Local() {
+    }
 
-    public Local(String rua , String bairro) {
+    public Local(String rua, String bairro) {
         this.bairro = bairro;
         this.rua = rua;
         this.seminarios = seminarios;
     }
 
     public void imprime() {
-        if(this.seminarios != null) {
+        if (this.seminarios != null) {
             System.out.print("Seminarios do Lugar: ");
-            for(Seminarios sem : this.seminarios) {
-                System.out.print(" "+sem.getTitulo()+" , ");
+            for (Seminarios sem : this.seminarios) {
+                System.out.print(" " + sem.getTitulo() + " , ");
             }
             System.out.println();
-        }
-        else {
+        } else {
             System.out.println("O lugar nao possui seminarios");
         }
-        System.out.println("Bairro: "+this.bairro);
-        System.out.println("Rua: "+this.rua);
+        System.out.println("Bairro: " + this.bairro);
+        System.out.println("Rua: " + this.rua);
     }
 
     public Seminarios[] getSeminarios() {

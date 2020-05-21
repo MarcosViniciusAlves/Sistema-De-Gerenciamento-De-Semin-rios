@@ -8,8 +8,10 @@ public class Seminarios {
     private Local local;
     private String titulo;
 
-    public Seminarios () {}
-    public Seminarios (Coordenador coordenador , Local local , String titulo , Participantes... participantes) {
+    public Seminarios() {
+    }
+
+    public Seminarios(Coordenador coordenador, Local local, String titulo, Participantes... participantes) {
         this.participantes = participantes;
         this.coordenador = coordenador;
         this.local = local;
@@ -24,25 +26,19 @@ public class Seminarios {
                 System.out.print(" " + participante.getNome() + ", ");
             }
             System.out.println();
-        }
-
-        else {
+        } else {
             System.out.println("Nao se tem participantes no seminario");
         }
 
         if (this.coordenador != null) {
-            System.out.println("Coordenador: " + this.coordenador.getNome()+"\nEspecializacao: "+this.coordenador.getEspecializacao());
-        }
-
-        else {
+            System.out.println("Coordenador: " + this.coordenador.getNome() + "\nEspecializacao: " + this.coordenador.getEspecializacao());
+        } else {
             System.out.println("Nao tem um Coordenador do seminario");
         }
 
-        if(this.local != null){
-            System.out.println("Local / Bairro: "+this.local.getBairro()+"\n,na Rua: "+this.local.getRua());
-        }
-
-        else {
+        if (this.local != null) {
+            System.out.println("Local / Bairro: " + this.local.getBairro() + "\n,na Rua: " + this.local.getRua());
+        } else {
             System.out.println("O seminario nao possui local definido");
         }
 
